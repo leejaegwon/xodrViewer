@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>OpenDRIVE Visualization</title>
+	<link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}">
+	<!-- Three.js and dependencies -->
+	<script src="{{ url_for('static', path='/js/lib/three.min.js') }}"></script>
+	<script src="{{ url_for('static', path='/js/lib/controls/OrbitControls.js') }}"></script>
+	<script src="{{ url_for('static', path='/js/lib/dat.gui.min.js') }}"></script>
+	<!-- XML Parser -->
+	<script src="{{ url_for('static', path='/js/lib/fast-xml-parser.min.js') }}"></script>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>OpenDRIVE Visualization</h1>
+			<div class="controls">
+				<button id="toggleReferenceLines" aria-label="Toggle reference lines visibility">Toggle Reference Lines</button>
+				<button id="toggleVehicle" aria-label="Toggle vehicle visibility">Toggle Vehicle</button>
+				<div class="select-wrapper">
+					<label for="xodrSelector" id="xodrLabel">Select OpenDRIVE File:</label>
+					<select id="xodrSelector" aria-labelledby="xodrLabel">
+						<option value="sample.xodr">Sample Road</option>
+					</select>
+				</div>
+			</div>
+		</header>
+		
+		<div id="visualization-container">
+			<!-- Three.js scene will be rendered here -->
+		</div>
+		
+		<div class="vehicle-info">
+			<h2>Vehicle Data</h2>
+			<div id="vehicle-position">
+				<p>X: <span id="pos-x">0.0</span></p>
+				<p>Y: <span id="pos-y">0.0</span></p>
+				<p>Z: <span id="pos-z">0.0</span></p>
+				<p>Heading: <span id="heading">0.0</span>°</p>
+				<p>Speed: <span id="speed">0.0</span> m/s</p>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Application specific scripts -->
+	<script src="{{ url_for('static', path='/js/opendrive.js') }}"></script>
+	<script src="{{ url_for('static', path='/js/vehicle.js') }}"></script>
+	<script src="{{ url_for('static', path='/js/vehicle_manager.js') }}"></script>
+	<script src="{{ url_for('static', path='/js/main.js') }}"></script>
+</body>
+</html>

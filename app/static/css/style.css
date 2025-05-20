@@ -1,0 +1,102 @@
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Controls section */
+.controls {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Select wrapper styles */
+.select-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+label {
+    color: white;
+    font-size: 0.9rem;
+}
+
+select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: white;
+    font-size: 0.9rem;
+}
+
+/* Visualization container */
+#visualization-container {
+    flex: 1;
+    position: relative;
+    background-color: #000;
+}
+
+/* Vehicle info section */
+.vehicle-info {
+    background-color: #fff;
+    padding: 1rem;
+    border-top: 1px solid #ccc;
+}
+
+.vehicle-info h2 {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+}
+
+#vehicle-position {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+#vehicle-position p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+#vehicle-position span {
+    font-weight: bold;
+    color: #4CAF50;
+}
